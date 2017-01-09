@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(800, 300, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 function preload() {
     game.load.image('sky', 'assets/sky.png');
@@ -20,7 +20,6 @@ function create() {
   platforms.enableBody = true
   ground = platforms.create(0, game.world.height - 64, 'ground')
   ground.scale.setTo(2, 2)
-  ground.width = 400
   ground.body.immovable = true
 
   // OTHER LEDGES:
